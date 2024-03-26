@@ -1,0 +1,14 @@
+#account-image{
+    width: 25px;
+    position: relative;
+    bottom: 48px;
+    height: auto;
+    right: 20px;
+    border: 5px black;
+}
+
+.acc-image-container{
+    display: flex;
+    justify-content: right;
+    justify-items: right;
+}
