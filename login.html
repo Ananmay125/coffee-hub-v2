@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coffee Hub</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link class="favicon" rel="icon" type="x/icon" href="/images/favicon2.png">
+    <script src="/javascript/main.js"></script>
+    <link rel="stylesheet" href="/css/styles-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Caveat:wght@700&family=Josefin+Sans:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+    <div class="center-div-nav">
+        <!--<img class="coffee-nav-image" src="images/cooffeee.png" alt="Coffee">-->
+        <a class="main-nav-heading" href="/index.html"><h2 class="main-heading">Coffee Hub</h2></a>
+        <a class="top-nav-a-1" href="/index.html">Home</a>
+        <a class="top-nav-a-2" href="/catalog.html">Catalog</a>
+        <!--<a class="top-nav-a" href="resources.html">Resources</a>
+        <a class="top-nav-a" href="info.html">Info</a>-->
+    </div>
+</nav>
+    <div class="form-div2">
+        <h1>User Login</h1><br>
+    </div>
+    <div class="form-div">
+        <form autocomplete="off" action="/login" method="POST">
+            <label for="username">Username:</label><br>
+            <input autocomplete="off" autofocus="autofocus" type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <br>
+            <input autocomplete="off" type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="form-div2">
+        <div id="error-message"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryParams = new URLSearchParams(window.location.search);
+            const error = queryParams.get('error');
+
+            if (error) {
+                document.getElementById('error-message').innerText = error;
+            }
+        });
+    </script>
+    <div class="form-div2">
+        <h4 class="h4-class">Not a user? Register <a class="reg-class" href="/register">here!</a></h4>
+    </div>
+    <div class="nothing"></div>
+</body>
+</html>
